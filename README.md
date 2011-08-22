@@ -8,15 +8,20 @@ Edit `gen_tag_exports.py` to have a valid Cloudkick OAuth key and secret.
 
 Run...
 
-`./gen_tag_exports.py > blah
-source blah`
+    ./gen_tag_exports.py > blah
 
-Once you've sourced the file, you can create scripts like this...
+The file blah should look something like this:
 
-`for i in $TAG_BLAH
-do
-    ssh $i hostname
-done`
+    export TAG_EXAMPLE1="10.0.0.1"
+    export TAG_EXAMPLE2="10.0.0.1 10.0.0.3"
+    export TAG_TEST="10.0.0.1 10.0.0.2"
+
+Once you've sourced the file (`source blah`), you can create scripts like this...
+
+    for i in $TAG_BLAH
+    do
+        ssh $i hostname
+    done
 
 ...which will run `hostname` on all your servers tagged "blah".
 
