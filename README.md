@@ -18,12 +18,12 @@ The file blah should look something like this:
 
 Once you've sourced the file (`source blah`), you can create scripts like this...
 
-    for i in $TAG_BLAH
+    for i in $TAG_TEST
     do
         ssh $i hostname
     done
 
-...which will run `hostname` on all your servers tagged "blah".
+...which will run `hostname` on all your servers tagged "test".
 
 # Caveats #
 
